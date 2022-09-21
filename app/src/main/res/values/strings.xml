@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">My First App - ND</string>
+
+    <string name="firstName_message">Ingrese un nombre:</string>
+    <string name="lastName_message">Ingrese un apellido:</string>
+
+    <string name="gender_message">Genero:</string>
+    <string-array name="gender_array">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string name="birth_message">Fecha de nacimiento:</string>
+    <string name="defaultDate">1/1/2021</string>
+
+    <string name="doYouLikeProgramming_message">¿Le gusta programar?</string>
+    <string name="yesOption">Si</string>
+    <string name="noOption">No</string>
+
+    <string name="language_message">Lenguaje:</string>
+    <string name="language1_message">C/C++</string>
+    <string name="language2_message">Python</string>
+    <string name="language3_message">Kotlin</string>
+    <string name="language4_message">Java</string>
+    <string name="language5_message">C#</string>
+    <string name="language6_message">JS</string>
+    <string name="language7_message">Ruby</string>
+    <string name="language8_message">Go</string>
+
+    <string name="send_message">ENVIAR</string>
+    <string name="clean_message">LIMPIAR</string>
+</resources>

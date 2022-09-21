@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/firstNameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/firstName_message"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/lastNameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/lastName_message"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstNameTxt"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/genderView"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/gender_message"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/genderSpinner"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastNameTxt" />
+
+        <TextView
+            android:id="@+id/birthView"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/birth_message"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/birthDateView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderView" />
+
+        <TextView
+            android:id="@+id/doYouLikeProgrammingView"
+            android:layout_width="136dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/doYouLikeProgramming_message"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthView" />
+
+        <TextView
+            android:id="@+id/languageView"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/language_message"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doYouLikeProgrammingView" />
+
+        <Spinner
+            android:id="@+id/genderSpinner"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:spinnerMode="dropdown"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/genderView"
+            app:layout_constraintTop_toBottomOf="@+id/lastNameTxt"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/birthDateView"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/defaultDate"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/birthView"
+            app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
+            tools:ignore="UsingOnClickInXml,TouchTargetSizeCheck" />
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/doYouLikeProgrammingView"
+            app:layout_constraintTop_toBottomOf="@+id/birthDateView">
+
+            <RadioButton
+                android:id="@+id/yesRadio"
+                android:layout_width="85dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/yesOption"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck,UsingOnClickInXml" />
+
+            <RadioButton
+                android:id="@+id/noRadio"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/noOption"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,UsingOnClickInXml" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/option1Checkbox"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/language1_message"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/option3Checkbox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/languageView"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            tools:ignore="OnClick,UsingOnClickInXml,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/option2Checkbox"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/language2_message"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/option4Checkbox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option1Checkbox"
+            tools:ignore="OnClick,UsingOnClickInXml,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/option3Checkbox"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/language3_message"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/option1Checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            tools:ignore="OnClick,UsingOnClickInXml,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/option4Checkbox"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/language4_message"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/option2Checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/option3Checkbox"
+            tools:ignore="OnClick,UsingOnClickInXml,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/option5Checkbox"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/language5_message"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/option8Checkbox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option6Checkbox"
+            tools:ignore="OnClick,UsingOnClickInXml,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/option6Checkbox"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/language6_message"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/option7Checkbox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option2Checkbox"
+            tools:ignore="OnClick,UsingOnClickInXml,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/option7Checkbox"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/language7_message"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/option6Checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/option4Checkbox"
+            tools:ignore="OnClick,UsingOnClickInXml,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/option8Checkbox"
+            android:layout_width="93dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/language8_message"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/option5Checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/option7Checkbox"
+            tools:ignore="OnClick,UsingOnClickInXml,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/cleanButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/clean_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sendButton"
+            app:layout_constraintTop_toBottomOf="@+id/option8Checkbox"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/send_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cleanButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option5Checkbox"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
